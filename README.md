@@ -33,9 +33,9 @@ It wrote the code, ran away, and now the game is unplayable.
   I refactored the core game logic into `logic_utils.py`, fixed the comparison logic so that high/low hints match the actual secret number, and made sure the secret number always stays within the difficulty range (including after starting a new game). I also simplified and corrected the scoring and attempt handling so that attempts and points behave in a more consistent and predictable way.
 
 ## 📸 Demo
+<img width="1893" height="808" alt="Screenshot 2026-03-17 055218" src="https://github.com/user-attachments/assets/7311d727-9de6-4502-bf42-71a5f03da193" />
 
-- [x] Fixed game screenshot  
-  After applying the fixes, I captured a screenshot showing a winning state with the correct secret number revealed, the score updated appropriately, and the hints behaving correctly throughout the game.
+
 
 ## 🚀 Stretch Features
 
