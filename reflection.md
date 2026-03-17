@@ -35,6 +35,7 @@ I treated a bug as fixed only after I could describe the root cause in my own wo
 
 ## 4. What did you learn about Streamlit and state?
 
+- In your own words, explain why the secret number kept changing in the original app.
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
 
 I learned that the secret number kept changing in the original app because it was being re‑generated on each rerun instead of being stored persistently in `st.session_state`. Streamlit reruns the script from top to bottom every time the user interacts with a widget, so any plain variables get reset unless they are stored in session state or some other persistent place. To a friend, I would explain session state as a little dictionary where you can keep values that should survive these reruns, like the current secret number, attempt count, and score. The key change was only setting the secret once when the corresponding key was missing in `st.session_state`, instead of creating a new random number on every run. After that, the secret stayed stable across guesses until I explicitly started a new game.
